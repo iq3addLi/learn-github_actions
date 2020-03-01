@@ -49,7 +49,7 @@ jobs:
           base64 --decode Release_xcconfig_base64.txt > xcconfig/Realase_Singing.xcconfig
       -
         name: "Build | xcodebuild archive"
-        run: set -o pipefail && xcodebuild -configuration Release archive -archivePath ./archive | xcpretty
+        run: set -o pipefail && xcodebuild -scheme HelloGithubActions -configuration Release archive -archivePath ./archive | xcpretty
       -
         name: "list files"
         run: ls -l
