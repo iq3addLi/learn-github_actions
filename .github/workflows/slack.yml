@@ -1,0 +1,14 @@
+name: "Notify to Slack"
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: "Send notification to Slack"
+          uses: pullreminders/slack-action@master
+          with:
+            args: '{\"channel\":\"work\", \"text\":\"GithubActionsからSlack通知のテストです。\"}'
+          env:
+            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

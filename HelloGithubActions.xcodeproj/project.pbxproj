@@ -18,6 +18,7 @@
 		3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */; };
 		3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */; };
 		3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864A240BC72D0071D900 /* exportOptions.plist */; };
+		3C9D864D240BD5110071D900 /* slack.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864C240BD5110071D900 /* slack.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = deploy_to_deploygate.yml; sourceTree = "<group>"; };
 		3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release_Singing.xcconfig; sourceTree = "<group>"; };
 		3C9D864A240BC72D0071D900 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
+		3C9D864C240BD5110071D900 /* slack.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = slack.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				3C81BF67240B5FB00011EA1A /* build_simulator.yml */,
 				3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */,
+				3C9D864C240BD5110071D900 /* slack.yml */,
 			);
 			name = workflows;
 			path = .github/workflows;
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C81BF512408ED400011EA1A /* LaunchScreen.storyboard in Resources */,
+				3C9D864D240BD5110071D900 /* slack.yml in Resources */,
 				3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */,
 				3C81BF4E2408ED400011EA1A /* Assets.xcassets in Resources */,
 				3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */,
