@@ -17,6 +17,7 @@
 		3C81BF6A240B62290011EA1A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF69240B62290011EA1A /* README.md */; };
 		3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */; };
 		3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */; };
+		3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864A240BC72D0071D900 /* exportOptions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3C81BF6D240B6E930011EA1A /* Debug_Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug_Signing.xcconfig; sourceTree = "<group>"; };
 		3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = deploy_to_deploygate.yml; sourceTree = "<group>"; };
 		3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release_Singing.xcconfig; sourceTree = "<group>"; };
+		3C9D864A240BC72D0071D900 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				3C81BF432408ED3E0011EA1A /* HelloGithubActions */,
 				3C81BF5A2408ED400011EA1A /* HelloGithubActionsTests */,
 				3C81BF6B240B69250011EA1A /* xcconfigs */,
+				3C9D8649240BC4920071D900 /* exportOptions */,
 				3C81BF422408ED3E0011EA1A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +128,14 @@
 				3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */,
 			);
 			path = xcconfigs;
+			sourceTree = "<group>";
+		};
+		3C9D8649240BC4920071D900 /* exportOptions */ = {
+			isa = PBXGroup;
+			children = (
+				3C9D864A240BC72D0071D900 /* exportOptions.plist */,
+			);
+			name = exportOptions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				3C81BF512408ED400011EA1A /* LaunchScreen.storyboard in Resources */,
 				3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */,
 				3C81BF4E2408ED400011EA1A /* Assets.xcassets in Resources */,
+				3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */,
 				3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */,
 				3C81BF6A240B62290011EA1A /* README.md in Resources */,
 				3C81BF68240B5FB00011EA1A /* build_simulator.yml in Resources */,
