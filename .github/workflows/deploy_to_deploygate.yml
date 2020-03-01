@@ -44,7 +44,7 @@ jobs:
       -
         name: "Expantion signing config"
         run: |
-          echo "${{ secrets.P12_BASE64 }}" > Release_xcconfig_base64.txt
+          echo "${{ secrets.SIGNING_XCCONFIG_BASE64 }}" > Release_xcconfig_base64.txt
           mkdir ./xcconfigs
           base64 --decode Release_xcconfig_base64.txt > xcconfigs/Release_Singing.xcconfig
       -
