@@ -60,11 +60,11 @@ jobs:
         run: set -o pipefail && xcodebuild -exportArchive -archivePath ./archive.xcarchive -exportPath ./build -exportOptionsPlist ./exportOptions.plist | xcpretty
       -
         name: "Deploy to deploygate"
-        run: |
-              curl https://deploygate.com/api/users/addli/apps \
-              -F file="./build/Apps/HelloGithubActions.ipa" \
-              -F token="${{ secrets.DEPLOYGATE_API_KEY }}" \
-              -F message="Test" \
+        run: >
+              curl https://deploygate.com/api/users/addli/apps
+              -F file="./build/Apps/HelloGithubActions.ipa"
+              -F token="${{ secrets.DEPLOYGATE_API_KEY }}"
+              -F message="Test"
               -F release_note="Test"
       -
         name: "list files"
