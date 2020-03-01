@@ -15,6 +15,7 @@
 		3C81BF5C2408ED400011EA1A /* HelloGithubActionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81BF5B2408ED400011EA1A /* HelloGithubActionsTests.swift */; };
 		3C81BF68240B5FB00011EA1A /* build_simulator.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF67240B5FB00011EA1A /* build_simulator.yml */; };
 		3C81BF6A240B62290011EA1A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF69240B62290011EA1A /* README.md */; };
+		3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		3C81BF5D2408ED400011EA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C81BF67240B5FB00011EA1A /* build_simulator.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = build_simulator.yml; sourceTree = "<group>"; };
 		3C81BF69240B62290011EA1A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3C81BF6C240B69550011EA1A /* Realase_Singing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Realase_Singing.xcconfig; sourceTree = "<group>"; };
+		3C81BF6D240B6E930011EA1A /* Debug_Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug_Signing.xcconfig; sourceTree = "<group>"; };
+		3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = deploy_to_deploygate.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				3C81BF66240B5FB00011EA1A /* workflows */,
 				3C81BF432408ED3E0011EA1A /* HelloGithubActions */,
 				3C81BF5A2408ED400011EA1A /* HelloGithubActionsTests */,
+				3C81BF6B240B69250011EA1A /* xcconfigs */,
 				3C81BF422408ED3E0011EA1A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,9 +111,19 @@
 			isa = PBXGroup;
 			children = (
 				3C81BF67240B5FB00011EA1A /* build_simulator.yml */,
+				3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */,
 			);
 			name = workflows;
 			path = .github/workflows;
+			sourceTree = "<group>";
+		};
+		3C81BF6B240B69250011EA1A /* xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				3C81BF6D240B6E930011EA1A /* Debug_Signing.xcconfig */,
+				3C81BF6C240B69550011EA1A /* Realase_Singing.xcconfig */,
+			);
+			path = xcconfigs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +209,7 @@
 			files = (
 				3C81BF512408ED400011EA1A /* LaunchScreen.storyboard in Resources */,
 				3C81BF4E2408ED400011EA1A /* Assets.xcassets in Resources */,
+				3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */,
 				3C81BF6A240B62290011EA1A /* README.md in Resources */,
 				3C81BF68240B5FB00011EA1A /* build_simulator.yml in Resources */,
 				3C81BF4C2408ED3E0011EA1A /* Main.storyboard in Resources */,
@@ -259,6 +275,7 @@
 /* Begin XCBuildConfiguration section */
 		3C81BF5E2408ED400011EA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C81BF6D240B6E930011EA1A /* Debug_Signing.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -319,6 +336,7 @@
 		};
 		3C81BF5F2408ED400011EA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C81BF6C240B69550011EA1A /* Realase_Singing.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -375,13 +393,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloGithubActions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.addli.learning.HelloGithubActions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,13 +408,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloGithubActions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.addli.learning.HelloGithubActions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

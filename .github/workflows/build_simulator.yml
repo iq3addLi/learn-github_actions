@@ -1,10 +1,10 @@
-name: BuildOnSimulator
+name: Build On Simulator
 
 on:
   push:
     branches:
       -
-        release
+        release/simulator
 
 jobs:
   build:

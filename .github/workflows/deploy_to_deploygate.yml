@@ -1,0 +1,52 @@
+name: "Deploy To Deploygate"
+
+on:
+  push:
+    branches:
+      -
+        release/deploygate
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+      KEYCHAIN: '/Library/Keychains/System.keychain'
+    steps:
+      -
+        name: "Checkout"
+        uses: actions/checkout@v1
+      -
+        name: "Select Xcode version"
+        run: sudo xcode-select -s '/Applications/Xcode_11.3.app/Contents/Developer'
+      -
+        name: "Show Xcode version"
+        run: xcodebuild -version
+      -
+        name: "Install certificate"
+        run: |
+          echo "${{ secrets.CERTIFICATE_BASE64 }}" > distribution.cer.txt
+          base64 --decode distribution.cer.txt > distribution.cer
+          sudo security import distribution.cer -k $KEYCHAIN -T /usr/bin/codesign
+      -
+        name: "Install secret"
+        run: |
+          echo "${{ secrets.P12_BASE64 }}" > ios_distribution.p12.txt
+          base64 --decode ios_distribution.p12.txt > ios_distribution.p12
+          sudo security import ios_distribution.p12 -k $KEYCHAIN -P ${{ secrets.P12_PASSWORD }} -T /usr/bin/codesign
+      -
+        name: "Install provisioning"
+        run: |
+          echo "${{ secrets.PROVISIONING_BASE64 }}" > distribution.mobileprovision.txt
+          base64 --decode distribution.mobileprovision.txt > ~/Library/MobileDevice/Provisioning\ Profiles/distribution.mobileprovision
+      -
+        name: "Expantion signing config"
+        run: |
+          echo "${{ secrets.P12_BASE64 }}" > Release_xcconfig_base64.txt
+          mkdir ./xcconfig
+          base64 --decode Release_xcconfig_base64.txt > xcconfig/Realase_Singing.xcconfig
+      -
+        name: "Build | xcodebuild archive"
+        run: set -o pipefail && xcodebuild -configuration Release archive -archivePath ./archive | xcpretty
+      -
+        name: "list files"
+        run: ls -l
