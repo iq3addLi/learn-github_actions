@@ -62,7 +62,7 @@ jobs:
         name: "Deploy to deploygate"
         run: >
               curl https://deploygate.com/api/users/addli/apps
-              -F file="./build/Apps/HelloGithubActions.ipa"
+              -F file="@./build/Apps/HelloGithubActions.ipa"
               -F token="${{ secrets.DEPLOYGATE_API_KEY }}"
               -F message="Test"
               -F release_note="Test"
