@@ -45,8 +45,8 @@ jobs:
         name: "Expantion signing config"
         run: |
           echo "${{ secrets.P12_BASE64 }}" > Release_xcconfig_base64.txt
-          mkdir ./xcconfig
-          base64 --decode Release_xcconfig_base64.txt > xcconfig/Realase_Singing.xcconfig
+          mkdir ./xcconfigs
+          base64 --decode Release_xcconfig_base64.txt > xcconfigs/Realase_Singing.xcconfig
       -
         name: "Build | xcodebuild archive"
         run: set -o pipefail && xcodebuild -scheme HelloGithubActions -configuration Release archive -archivePath ./archive | xcpretty
