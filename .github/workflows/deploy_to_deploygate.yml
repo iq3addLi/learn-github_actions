@@ -66,6 +66,9 @@ jobs:
         name: "Check | xcodebuild showBuildSettings"
         run: xcodebuild -showBuildSettings
       -
+        name: "list files"
+        run: ls -l
+      -
         name: "Build | xcodebuild archive"
         run: >
           xcodebuild
