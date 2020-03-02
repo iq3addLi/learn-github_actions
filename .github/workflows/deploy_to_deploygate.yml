@@ -65,7 +65,6 @@ jobs:
       -
         name: "Build | xcodebuild archive"
         run: >
-          set -o pipefail &&
           xcodebuild
             -workspace ${PROJECT_NAME}.xcworkspace
             -sdk iphoneos
@@ -76,7 +75,6 @@ jobs:
       -
         name: "Export | xcodebuild export"
         run: >
-          set -o pipefail &&
           xcodebuild
             -exportArchive
             -archivePath ./archive.xcarchive
