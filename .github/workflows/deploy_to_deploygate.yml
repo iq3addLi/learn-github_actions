@@ -58,6 +58,10 @@ jobs:
         run: |
           ruby --version
       -
+        name: "Pod Setup"
+        run: |
+          pod setup
+      -
         name: "Pod install"
         run: |
           pod repo update
