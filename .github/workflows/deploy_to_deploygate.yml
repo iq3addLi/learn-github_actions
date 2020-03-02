@@ -54,6 +54,10 @@ jobs:
           echo "${{ secrets.EXPORTOPTIONS_BASE64 }}" > exportOptions_base64.txt
           base64 --decode exportOptions_base64.txt > ./exportOptions.plist
       -
+        name: "Show ruby version"
+        run: |
+          ruby --version
+      -
         name: "Pod install"
         run: |
           pod repo update
