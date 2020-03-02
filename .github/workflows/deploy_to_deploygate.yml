@@ -10,8 +10,8 @@ jobs:
   build:
     runs-on: macos-latest
     env:
-      PROJECT_NAME: 'HelloGithubActions'
-      KEYCHAIN: '/Library/Keychains/System.keychain'
+      PROJECT_NAME: HelloGithubActions
+      KEYCHAIN: /Library/Keychains/System.keychain
     steps:
       -
         name: "Checkout"
