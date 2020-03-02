@@ -59,6 +59,9 @@ jobs:
           pod repo update
           pod install
       -
+        name: "Check | xcodebuild showBuildSettings"
+        run: xcodebuild -showBuildSettings
+      -
         name: "Build | xcodebuild archive"
         run: >
           xcodebuild
