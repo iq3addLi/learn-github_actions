@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CryptoSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let data = Data( [0x01, 0x02, 0x03])
+        print("\(data)")
     }
 
 

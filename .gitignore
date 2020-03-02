@@ -91,3 +91,5 @@ iOSInjectionProject/
 
 xcconfigs
 exportOptions.plist
+HelloGithubActions.xcworkspace
+Pods

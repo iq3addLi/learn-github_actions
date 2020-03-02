@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: macos-latest
     env:
+      PROJECT_NAME: 'HelloGithubActions'
       KEYCHAIN: '/Library/Keychains/System.keychain'
     steps:
       -
@@ -53,19 +54,38 @@ jobs:
           echo "${{ secrets.EXPORTOPTIONS_BASE64 }}" > exportOptions_base64.txt
           base64 --decode exportOptions_base64.txt > ./exportOptions.plist
       -
+        name: "Pod install"
+        run: |
+          pod repo update
+          pod install
+      -
         name: "Build | xcodebuild archive"
-        run: set -o pipefail && xcodebuild -scheme HelloGithubActions -configuration Release archive -archivePath ./archive | xcpretty
+        run: >
+          set -o pipefail &&
+          xcodebuild
+            -workspace ${PROJECT_NAME}.xcworkspace
+            -sdk iphoneos
+            -scheme ${PROJECT_NAME}
+            -configuration Release
+            -archivePath ./archive
+            archive | xcpretty
       -
         name: "Export | xcodebuild export"
-        run: set -o pipefail && xcodebuild -exportArchive -archivePath ./archive.xcarchive -exportPath ./build -exportOptionsPlist ./exportOptions.plist | xcpretty
+        run: >
+          set -o pipefail &&
+          xcodebuild
+            -exportArchive
+            -archivePath ./archive.xcarchive
+            -exportPath ./build
+            -exportOptionsPlist ./exportOptions.plist | xcpretty
       -
         name: "Deploy to deploygate"
         run: >
-              curl https://deploygate.com/api/users/addli/apps
-              -F file="@./build/Apps/HelloGithubActions.ipa"
-              -F token="${{ secrets.DEPLOYGATE_API_KEY }}"
-              -F message="Test"
-              -F release_note="Test"
+          curl https://deploygate.com/api/users/addli/apps
+            -F file="@./build/Apps/${PROJECT_NAME}.ipa"
+            -F token="${{ secrets.DEPLOYGATE_API_KEY }}"
+            -F message="Test"
+            -F release_note="Test"
       -
         name: "list files"
         run: ls -l

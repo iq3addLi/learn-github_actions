@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		297F108CD69E8E8C7D783DD1 /* Pods_HelloGithubActions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0505062FD54B366ACE373E5 /* Pods_HelloGithubActions.framework */; };
 		3C81BF452408ED3E0011EA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81BF442408ED3E0011EA1A /* AppDelegate.swift */; };
 		3C81BF492408ED3E0011EA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81BF482408ED3E0011EA1A /* ViewController.swift */; };
 		3C81BF4C2408ED3E0011EA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF4A2408ED3E0011EA1A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */; };
 		3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864A240BC72D0071D900 /* exportOptions.plist */; };
 		3C9D864D240BD5110071D900 /* slack.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864C240BD5110071D900 /* slack.yml */; };
+		3CCE59AB240D291100901C58 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE59AA240D291100901C58 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release_Singing.xcconfig; sourceTree = "<group>"; };
 		3C9D864A240BC72D0071D900 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 		3C9D864C240BD5110071D900 /* slack.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = slack.yml; sourceTree = "<group>"; };
+		3CCE59AA240D291100901C58 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6AD2D2C018178188C79B3A52 /* Pods-HelloGithubActions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloGithubActions.release.xcconfig"; path = "Target Support Files/Pods-HelloGithubActions/Pods-HelloGithubActions.release.xcconfig"; sourceTree = "<group>"; };
+		C64B32BFB744BBE5D1B0FF0E /* Pods-HelloGithubActions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloGithubActions.debug.xcconfig"; path = "Target Support Files/Pods-HelloGithubActions/Pods-HelloGithubActions.debug.xcconfig"; sourceTree = "<group>"; };
+		E0505062FD54B366ACE373E5 /* Pods_HelloGithubActions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloGithubActions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297F108CD69E8E8C7D783DD1 /* Pods_HelloGithubActions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,16 +76,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30F38050224497766D272A5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0505062FD54B366ACE373E5 /* Pods_HelloGithubActions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C81BF382408ED3E0011EA1A = {
 			isa = PBXGroup;
 			children = (
 				3C81BF69240B62290011EA1A /* README.md */,
+				3CCE59AA240D291100901C58 /* Podfile */,
 				3C81BF66240B5FB00011EA1A /* workflows */,
 				3C81BF432408ED3E0011EA1A /* HelloGithubActions */,
 				3C81BF5A2408ED400011EA1A /* HelloGithubActionsTests */,
 				3C81BF6B240B69250011EA1A /* xcconfigs */,
 				3C9D8649240BC4920071D900 /* exportOptions */,
 				3C81BF422408ED3E0011EA1A /* Products */,
+				AAB20EF0080F479A1B7BC53D /* Pods */,
+				30F38050224497766D272A5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +159,16 @@
 			name = exportOptions;
 			sourceTree = "<group>";
 		};
+		AAB20EF0080F479A1B7BC53D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C64B32BFB744BBE5D1B0FF0E /* Pods-HelloGithubActions.debug.xcconfig */,
+				6AD2D2C018178188C79B3A52 /* Pods-HelloGithubActions.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C81BF602408ED400011EA1A /* Build configuration list for PBXNativeTarget "HelloGithubActions" */;
 			buildPhases = (
+				0C152E3AA4E0115E0CBAB5BD /* [CP] Check Pods Manifest.lock */,
 				3C81BF3D2408ED3E0011EA1A /* Sources */,
 				3C81BF3E2408ED3E0011EA1A /* Frameworks */,
 				3C81BF3F2408ED3E0011EA1A /* Resources */,
+				9D851C720671B7D3842F8224 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCE59AB240D291100901C58 /* Podfile in Resources */,
 				3C81BF512408ED400011EA1A /* LaunchScreen.storyboard in Resources */,
 				3C9D864D240BD5110071D900 /* slack.yml in Resources */,
 				3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */,
@@ -242,6 +273,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C152E3AA4E0115E0CBAB5BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloGithubActions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D851C720671B7D3842F8224 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloGithubActions/Pods-HelloGithubActions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloGithubActions/Pods-HelloGithubActions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloGithubActions/Pods-HelloGithubActions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C81BF3D2408ED3E0011EA1A /* Sources */ = {
@@ -409,6 +482,7 @@
 		};
 		3C81BF612408ED400011EA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C64B32BFB744BBE5D1B0FF0E /* Pods-HelloGithubActions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HelloGithubActions/Info.plist;
@@ -424,6 +498,7 @@
 		};
 		3C81BF622408ED400011EA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AD2D2C018178188C79B3A52 /* Pods-HelloGithubActions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HelloGithubActions/Info.plist;
