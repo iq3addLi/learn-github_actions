@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,13 +14,6 @@
 		3C81BF4E2408ED400011EA1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF4D2408ED400011EA1A /* Assets.xcassets */; };
 		3C81BF512408ED400011EA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF4F2408ED400011EA1A /* LaunchScreen.storyboard */; };
 		3C81BF5C2408ED400011EA1A /* HelloGithubActionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C81BF5B2408ED400011EA1A /* HelloGithubActionsTests.swift */; };
-		3C81BF68240B5FB00011EA1A /* build_simulator.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF67240B5FB00011EA1A /* build_simulator.yml */; };
-		3C81BF6A240B62290011EA1A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C81BF69240B62290011EA1A /* README.md */; };
-		3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8643240BB4F60071D900 /* deploy_to_deploygate.yml */; };
-		3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D8647240BC1AE0071D900 /* Release_Singing.xcconfig */; };
-		3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864A240BC72D0071D900 /* exportOptions.plist */; };
-		3C9D864D240BD5110071D900 /* slack.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3C9D864C240BD5110071D900 /* slack.yml */; };
-		3CCE59AB240D291100901C58 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3CCE59AA240D291100901C58 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,7 +158,6 @@
 				C64B32BFB744BBE5D1B0FF0E /* Pods-HelloGithubActions.debug.xcconfig */,
 				6AD2D2C018178188C79B3A52 /* Pods-HelloGithubActions.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -252,15 +244,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCE59AB240D291100901C58 /* Podfile in Resources */,
 				3C81BF512408ED400011EA1A /* LaunchScreen.storyboard in Resources */,
-				3C9D864D240BD5110071D900 /* slack.yml in Resources */,
-				3C9D8648240BC1AE0071D900 /* Release_Singing.xcconfig in Resources */,
 				3C81BF4E2408ED400011EA1A /* Assets.xcassets in Resources */,
-				3C9D864B240BC72D0071D900 /* exportOptions.plist in Resources */,
-				3C9D8644240BB4F60071D900 /* deploy_to_deploygate.yml in Resources */,
-				3C81BF6A240B62290011EA1A /* README.md in Resources */,
-				3C81BF68240B5FB00011EA1A /* build_simulator.yml in Resources */,
 				3C81BF4C2408ED3E0011EA1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -74,30 +74,10 @@ jobs:
         run: ls -l
       -
         name: "Build | xcodebuild archive"
-        run: >
-          xcodebuild
-            -workspace ${PROJECT_NAME}.xcworkspace
-            -sdk iphoneos
-            -scheme ${PROJECT_NAME}
-            -configuration Release
-            -archivePath ./archive
-            archive | xcpretty
+        run: xcodebuild -workspace ${PROJECT_NAME}.xcworkspace -sdk iphoneos -scheme ${PROJECT_NAME} -configuration Release -archivePath ./archive archive | xcpretty
       -
         name: "Export | xcodebuild export"
-        run: >
-          xcodebuild
-            -exportArchive
-            -archivePath ./archive.xcarchive
-            -exportPath ./build
-            -exportOptionsPlist ./exportOptions.plist | xcpretty
+        run: xcodebuild -exportArchive -archivePath ./archive.xcarchive -exportPath ./build -exportOptionsPlist ./exportOptions.plist | xcpretty
       -
         name: "Deploy to deploygate"
-        run: >
-          curl https://deploygate.com/api/users/addli/apps
-            -F file="@./build/Apps/${PROJECT_NAME}.ipa"
-            -F token="${{ secrets.DEPLOYGATE_API_KEY }}"
-            -F message="Test"
-            -F release_note="Test"
-      -
-        name: "list files"
-        run: ls -l
+        run: curl https://deploygate.com/api/users/addli/apps -F file="@./build/Apps/${PROJECT_NAME}.ipa" -F token="${{ secrets.DEPLOYGATE_API_KEY }}" -F message="Test" -F release_note="Test"
